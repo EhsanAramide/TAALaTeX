@@ -1,0 +1,55 @@
+\documentclass[RTL]{TAATemplate}
+\renewcommand{\rightheadertxt}{احسان آرمیده}
+\renewcommand{\leftheadertxt}{مکانیک آماری و ترمودینامیک ۱ / سری اول}
+
+% Packages
+\usepackage[headings=runin, 
+skip-below={1\baselineskip},
+counter-format={qu[1]-}]
+{exsheets}
+
+\usepackage{amsmath}
+
+\usepackage{enumitem}
+
+\usepackage{xepersian}
+
+\settextfont[Scale=1]{XB Zar}
+\setlatintextfont[Scale=1]{Junicode}
+\setdigitfont{XB Zar}
+
+\SetupExSheets[question]{name=}
+\SetupExSheets[solution]{name=پاسخ, print=true}
+\SetupExSheets[points]{name=نمره, use-name=true}
+
+\def\dbar{{\mathchar'26\mkern-12mu \mathrm{d}}}
+
+\begin{document}
+
+این یک متن آزمایشی است برای آزمودن تمپلیت با متون فارسی و رسم‌الخط آرامی.
+
+از این بابت می‌خواهیم با پکیج ExSheets چند سوال طرح کنیم.
+
+\begin{question}{2}
+    صرفاً نشان می‌دهیم که تابع $U = U(T, P)$ دیفرانسیل کاملش چگونه می‌شود؟
+\end{question}
+\begin{solution}
+برای نشان دادن دیفرانسیل کامل تابع مذکور خواهیم داشت:
+$$\mathrm{d}U = \left(\frac{\partial U}{\partial T}\right)_{P} \mathrm{d}T + \left(\frac{\partial U}{\partial P}\right)_{T} \mathrm{d}P$$
+\end{solution}
+
+\begin{question}{1}
+    در این سوال بررسی خواهیم کرد که:
+    \begin{enumerate}[label={\alph*)}]
+        \item چگونه کار را در یک سیستم ترمودینامیکی هیدرواستاتیکی می‌توان محاسبه نمود؟
+        \item چگونه گرما را برای یک گاز کامل محاسبه کنیم؟
+    \end{enumerate}
+\end{question}
+\begin{solution}
+    \begin{enumerate}[label={\alph*)}]
+        \item $$\dbar W = -P\mathrm{d}V \Rightarrow W  = -\int_{V_i}^{V_f} P\; \mathrm{d}V$$
+        \item $$\dbar Q = \mathrm{d}U - \dbar W = C_{V}\mathrm{d}T + P\mathrm{d}V \Rightarrow Q = \int_{T_i}^{T_f} C_{V}\; \mathrm{d}T + \int_{V_i}^{V_f} P\; \mathrm{d}V$$
+    \end{enumerate}
+\end{solution}
+
+\end{document}
