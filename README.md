@@ -51,3 +51,4 @@ This template is compatible with `XePersian` so you can use it with Persian text
 ## TODO
 
 - [ ] Check for Environment compatibility with persian text (XePersian)
+- [ ] Create Example with environment and logo.
